@@ -1,0 +1,13 @@
+/*TODO: Agregar estilo correcto */
+/*Solo para comodidad de desarrollo, luego se agregará el estilo correcto*/
+.navbar{
+  background-color: black !important;
+}
+
+.nav-link{
+  color: white !important;
+}
+
+.navbar-brand{
+  color: white !important;
+}
