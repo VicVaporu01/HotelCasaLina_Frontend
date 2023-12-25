@@ -19,7 +19,7 @@ export class CabinService {
   }
 
   getListCabins(): Observable<Cabin[]> {
-    return this.http.get<Cabin[]>(this.myAppUrl + '/getCabins');
+    return this.http.get<Cabin[]>(this.myAppUrl + 'getCabins/');
   }
 
 }
