@@ -1,5 +1,5 @@
 import {Injectable} from '@angular/core';
-import {environment} from "../../environments/environment.development";
+import {environment} from "../../environments/environment";
 import {HttpClient} from "@angular/common/http";
 
 // Interfaces
@@ -18,8 +18,8 @@ export class CabinService {
       this.myAppUrl = (<EnvironmentType>environment).endpoint;
   }
 
-  getListCabins(): Observable<Cabin[]> {
-    return this.http.get<Cabin[]>(this.myAppUrl + 'getCabins/');
+  getListCabins(): Observable<{cabins: Cabin[]}> {
+    return this.http.get<{cabins: Cabin[]}>(this.myAppUrl + 'getCabins/');
   }
 
 }

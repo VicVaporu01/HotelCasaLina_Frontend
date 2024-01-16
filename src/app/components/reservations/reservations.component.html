@@ -1,0 +1,27 @@
+<!--Example of a for loop-->
+<!--@for (cabin of arrCabins; track cabin.id; let lenght = $count) {-->
+<!--  <p>{{ cabin.name }}</p>-->
+<!--}-->
+
+<div class="container">
+  <div class="row justify-content-center mt-5">
+    <div class="col-md-9">
+      @for (cabin of arrCabins; track cabin.id; ) {
+        <div class="row mt-2 boxShadow">
+          <div class="col-md-4">
+            <img ngSrc="{{cabin.image[0].url}}" alt="" width="500" height="500" class="smallImg">
+          </div>
+          <div class="col-md-7 text-start">
+            <h2>{{ cabin.name }}</h2>
+            <p><b>Max count: </b>{{ cabin.maxCount }}</p>
+            <p><b>Cabin type: </b>{{ cabin.cabinType }}</p>
+
+            <div class="btnToRight">
+              <button class="btn btn-dark">View Details</button>
+            </div>
+          </div>
+        </div>
+      }
+    </div>
+  </div>
+</div>
